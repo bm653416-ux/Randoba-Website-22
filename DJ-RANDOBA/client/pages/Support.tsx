@@ -186,6 +186,42 @@ export default function Support() {
       features: ["Festival Setup Team", "24/7 Technical Support", "Backup Systems", "Insurance & Security"],
       image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop",
       popular: false
+    },
+    {
+      id: "mobile-dj",
+      name: "Mobile DJ Pack",
+      price: 320,
+      period: "per day",
+      originalPrice: 420,
+      description: "Portable and versatile setup perfect for mobile DJs and traveling performances.",
+      equipment: ["1x Native Instruments S4 MK3", "2x KRK Rokit 8 G4", "1x LED Par Light Set", "Portable DJ Booth", "All Cables & Stands"],
+      features: ["Portable Setup", "Quick Assembly", "Transport Cases", "Mobile Support"],
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=400&fit=crop",
+      popular: false
+    },
+    {
+      id: "corporate-event",
+      name: "Corporate Event Pack",
+      price: 380,
+      period: "per day",
+      originalPrice: 480,
+      description: "Professional audio solution designed specifically for corporate events and presentations.",
+      equipment: ["1x Pioneer DJM-900NXS2", "2x RCF HDL 20-A", "4x Shure SM58", "Wireless Presenter System", "Background Music Setup"],
+      features: ["Corporate Setup", "Presentation Audio", "Wireless Systems", "Professional Support"],
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
+      popular: false
+    },
+    {
+      id: "wedding-premium",
+      name: "Wedding Premium Pack",
+      price: 520,
+      period: "per day",
+      originalPrice: 680,
+      description: "Elegant and comprehensive audio setup tailored for wedding celebrations and ceremonies.",
+      equipment: ["2x Pioneer CDJ-3000", "1x Pioneer DJM-900NXS2", "2x RCF HDL 20-A", "Ceremony Mic System", "Ambient Lighting", "Wireless Music"],
+      features: ["Wedding Ceremony Setup", "Reception Audio", "Romantic Lighting", "Dedicated Coordinator"],
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop",
+      popular: false
     }
   ];
 
