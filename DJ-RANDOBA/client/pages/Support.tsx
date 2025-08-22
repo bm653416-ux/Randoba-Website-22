@@ -609,7 +609,7 @@ export default function Support() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {equipmentPacks.map((pack, index) => (
               <Card 
                 key={pack.id} 
@@ -653,18 +653,6 @@ export default function Support() {
                         <div key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span className="text-xs text-gray-400">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="text-sm font-semibold text-white mb-2">Included Services</h4>
-                    <div className="space-y-1">
-                      {pack.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <Star className="w-3 h-3 text-purple-400" />
-                          <span className="text-xs text-gray-400">{feature}</span>
                         </div>
                       ))}
                     </div>
