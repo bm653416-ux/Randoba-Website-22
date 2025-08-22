@@ -181,22 +181,6 @@ export default function Courses() {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "Mixing":
-        return <Headphones className="w-4 h-4" />;
-      case "Production":
-        return <Volume2 className="w-4 h-4" />;
-      case "Business":
-        return <Award className="w-4 h-4" />;
-      case "Equipment":
-        return <Music className="w-4 h-4" />;
-      case "Performance":
-        return <PlayCircle className="w-4 h-4" />;
-      default:
-        return <GraduationCap className="w-4 h-4" />;
-    }
-  };
 
   return (
     <div className="min-h-screen">
