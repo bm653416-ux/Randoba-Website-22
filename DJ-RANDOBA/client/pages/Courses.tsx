@@ -293,9 +293,9 @@ export default function Courses() {
               ? {
                   id: selectedCourse.id,
                   title: selectedCourse.title,
-                  instructor: selectedCourse.instructor,
-                  duration: selectedCourse.duration,
-                  location: selectedCourse.format,
+                  instructor: "Professional Instructor",
+                  duration: "Comprehensive Course",
+                  location: "Online Learning Platform",
                   price: selectedCourse.price,
                   type: "course",
                 }
