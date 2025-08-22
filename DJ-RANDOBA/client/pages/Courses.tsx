@@ -281,8 +281,7 @@ export default function Courses() {
                     {course.level}
                   </Badge>
                   <Badge className="bg-gray-100 text-black border-gray-200">
-                    {getCategoryIcon(course.category)}
-                    <span className="ml-1">{course.category}</span>
+                    <span>{course.category}</span>
                   </Badge>
                 </div>
 
