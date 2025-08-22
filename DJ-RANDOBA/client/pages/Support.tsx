@@ -186,6 +186,42 @@ export default function Support() {
       features: ["Festival Setup Team", "24/7 Technical Support", "Backup Systems", "Insurance & Security"],
       image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop",
       popular: false
+    },
+    {
+      id: "mobile-dj",
+      name: "Mobile DJ Pack",
+      price: 320,
+      period: "per day",
+      originalPrice: 420,
+      description: "Portable and versatile setup perfect for mobile DJs and traveling performances.",
+      equipment: ["1x Native Instruments S4 MK3", "2x KRK Rokit 8 G4", "1x LED Par Light Set", "Portable DJ Booth", "All Cables & Stands"],
+      features: ["Portable Setup", "Quick Assembly", "Transport Cases", "Mobile Support"],
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=400&fit=crop",
+      popular: false
+    },
+    {
+      id: "corporate-event",
+      name: "Corporate Event Pack",
+      price: 380,
+      period: "per day",
+      originalPrice: 480,
+      description: "Professional audio solution designed specifically for corporate events and presentations.",
+      equipment: ["1x Pioneer DJM-900NXS2", "2x RCF HDL 20-A", "4x Shure SM58", "Wireless Presenter System", "Background Music Setup"],
+      features: ["Corporate Setup", "Presentation Audio", "Wireless Systems", "Professional Support"],
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
+      popular: false
+    },
+    {
+      id: "wedding-premium",
+      name: "Wedding Premium Pack",
+      price: 520,
+      period: "per day",
+      originalPrice: 680,
+      description: "Elegant and comprehensive audio setup tailored for wedding celebrations and ceremonies.",
+      equipment: ["2x Pioneer CDJ-3000", "1x Pioneer DJM-900NXS2", "2x RCF HDL 20-A", "Ceremony Mic System", "Ambient Lighting", "Wireless Music"],
+      features: ["Wedding Ceremony Setup", "Reception Audio", "Romantic Lighting", "Dedicated Coordinator"],
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop",
+      popular: false
     }
   ];
 
@@ -475,9 +511,9 @@ export default function Support() {
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Premium{" "}
+              Equipment Rental -{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Equipment Rental
+                Everything For a Flawless Event
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -563,9 +599,9 @@ export default function Support() {
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
-              Complete{" "}
+              DJ • Concert • Event |{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Equipment Packs
+                Pro Equipment Packages for Any Format
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -573,7 +609,7 @@ export default function Support() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {equipmentPacks.map((pack, index) => (
               <Card 
                 key={pack.id} 
@@ -622,18 +658,6 @@ export default function Support() {
                     </div>
                   </div>
 
-                  <div>
-                    <h4 className="text-sm font-semibold text-white mb-2">Included Services</h4>
-                    <div className="space-y-1">
-                      {pack.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <Star className="w-3 h-3 text-purple-400" />
-                          <span className="text-xs text-gray-400">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   <Button 
                     className={`w-full font-semibold transform hover:scale-105 transition-all duration-300 ${
                       pack.popular 
@@ -662,9 +686,9 @@ export default function Support() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Technical{" "}
+              Custom solutions at any scale -{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Support Services
+                one plan, zero stress
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

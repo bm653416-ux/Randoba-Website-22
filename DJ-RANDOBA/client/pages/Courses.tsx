@@ -12,15 +12,8 @@ import { Badge } from "@/components/ui/badge";
 import { useAuth } from "../contexts/AuthContext";
 import { BookingModal } from "../components/BookingModal";
 import {
-  Clock,
-  MapPin,
   Users,
-  Star,
-  Music,
-  Headphones,
-  Volume2,
   ArrowRight,
-  DollarSign,
   GraduationCap,
   Award,
   PlayCircle,
@@ -29,25 +22,18 @@ import {
 interface Course {
   id: string;
   title: string;
-  instructor: string;
-  duration: string;
-  format: string;
+  whoItsFor: string;
+  whatYoullLearn: string[];
+  outcome: string;
   price: number;
   currency: string;
-  studentsEnrolled: number;
-  maxStudents: number;
   level: "Beginner" | "Intermediate" | "Advanced";
   category: "Mixing" | "Production" | "Business" | "Equipment" | "Performance";
-  description: string;
   image: string;
-  rating: number;
-  lessons: number;
-  certificate: boolean;
 }
 
 export default function Courses() {
   const { user } = useAuth();
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
@@ -55,132 +41,56 @@ export default function Courses() {
     {
       id: "1",
       title: "DJ Mixing Fundamentals",
-      instructor: "Marcus Rodriguez",
-      duration: "8 weeks",
-      format: "Online + Live Sessions",
+      whoItsFor: "Complete beginners who want to start their DJ journey and learn the essential skills",
+      whatYoullLearn: [
+        "Beatmatching and tempo control",
+        "EQ techniques and frequency mixing",
+        "Seamless transitions between tracks",
+        "Reading the crowd and song selection"
+      ],
+      outcome: "Master foundational DJ skills and perform confident 30-minute sets at parties and small venues",
       price: 299,
       currency: "USD",
-      studentsEnrolled: 847,
-      maxStudents: 1000,
       level: "Beginner",
       category: "Mixing",
-      description:
-        "Master the fundamentals of DJ mixing including beatmatching, EQ, transitions, and reading the crowd. Perfect for complete beginners.",
-      image: "/placeholder.svg",
-      rating: 4.8,
-      lessons: 24,
-      certificate: true,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
     },
     {
       id: "2",
       title: "Advanced Turntablism Mastery",
-      instructor: "DJ Luna",
-      duration: "12 weeks",
-      format: "In-Person + Online",
+      whoItsFor: "Experienced DJs ready to master advanced scratch techniques and turntable skills",
+      whatYoullLearn: [
+        "Professional scratch techniques",
+        "Beat juggling and live remixing",
+        "Turntable tricks and showmanship",
+        "Competition-level performance skills"
+      ],
+      outcome: "Develop advanced turntablist skills for professional performances and DJ battles",
       price: 599,
       currency: "USD",
-      studentsEnrolled: 234,
-      maxStudents: 300,
       level: "Advanced",
       category: "Performance",
-      description:
-        "Learn advanced scratch techniques, beat juggling, and turntable tricks from world champion DJ Luna. Includes live practice sessions.",
-      image: "/placeholder.svg",
-      rating: 4.9,
-      lessons: 36,
-      certificate: true,
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     },
     {
       id: "3",
       title: "Electronic Music Production",
-      instructor: "Alex Waves",
-      duration: "10 weeks",
-      format: "Online",
+      whoItsFor: "DJs and musicians who want to create original electronic tracks and remixes",
+      whatYoullLearn: [
+        "Digital audio workstation mastery",
+        "Sound synthesis and design",
+        "Track arrangement and structure",
+        "Professional mixing and mastering"
+      ],
+      outcome: "Produce and release professional-quality electronic tracks ready for clubs and streaming",
       price: 449,
       currency: "USD",
-      studentsEnrolled: 623,
-      maxStudents: 800,
       level: "Intermediate",
       category: "Production",
-      description:
-        "Create professional electronic tracks using industry-standard software. Learn synthesis, arrangement, and mixing for electronic music.",
-      image: "/placeholder.svg",
-      rating: 4.7,
-      lessons: 30,
-      certificate: true,
-    },
-    {
-      id: "4",
-      title: "DJ Equipment Masterclass",
-      instructor: "Tech Mike",
-      duration: "6 weeks",
-      format: "Online",
-      price: 199,
-      currency: "USD",
-      studentsEnrolled: 412,
-      maxStudents: 500,
-      level: "Beginner",
-      category: "Equipment",
-      description:
-        "Everything you need to know about DJ equipment - from mixers and turntables to controllers and software setup.",
-      image: "/placeholder.svg",
-      rating: 4.6,
-      lessons: 18,
-      certificate: false,
-    },
-    {
-      id: "5",
-      title: "Mobile DJ Business Bootcamp",
-      instructor: "Sarah Martinez",
-      duration: "8 weeks",
-      format: "Online + Mentorship",
-      price: 799,
-      currency: "USD",
-      studentsEnrolled: 189,
-      maxStudents: 250,
-      level: "Intermediate",
-      category: "Business",
-      description:
-        "Build a successful mobile DJ business with marketing strategies, client management, pricing, and legal considerations.",
-      image: "/placeholder.svg",
-      rating: 4.8,
-      lessons: 32,
-      certificate: true,
-    },
-    {
-      id: "6",
-      title: "Hip-Hop DJ Techniques",
-      instructor: "DJ Rhythm",
-      duration: "6 weeks",
-      format: "In-Person",
-      price: 399,
-      currency: "USD",
-      studentsEnrolled: 156,
-      maxStudents: 200,
-      level: "Advanced",
-      category: "Performance",
-      description:
-        "Master hip-hop specific techniques including scratching, sampling, beat juggling, and party rocking skills.",
-      image: "/placeholder.svg",
-      rating: 4.9,
-      lessons: 24,
-      certificate: true,
-    },
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=400&fit=crop",
+    }
   ];
 
-  const categories = [
-    "All",
-    "Mixing",
-    "Production",
-    "Business",
-    "Equipment",
-    "Performance",
-  ];
-
-  const filteredCourses =
-    selectedCategory === "All"
-      ? courses
-      : courses.filter((course) => course.category === selectedCategory);
 
   const getLevelColor = (level: string) => {
     switch (level) {
@@ -195,22 +105,6 @@ export default function Courses() {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "Mixing":
-        return <Headphones className="w-4 h-4" />;
-      case "Production":
-        return <Volume2 className="w-4 h-4" />;
-      case "Business":
-        return <Award className="w-4 h-4" />;
-      case "Equipment":
-        return <Music className="w-4 h-4" />;
-      case "Performance":
-        return <PlayCircle className="w-4 h-4" />;
-      default:
-        return <GraduationCap className="w-4 h-4" />;
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -242,10 +136,13 @@ export default function Courses() {
               </Badge>
 
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
-                  Master{" "}
-                  <span className="text-white underline decoration-4 underline-offset-8">
-                    DJ Courses
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight drop-shadow-lg max-w-4xl mx-auto">
+                  <span className="block text-white/90 text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-2 tracking-wide">
+                    Custom solutions at any scale
+                  </span>
+                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent relative">
+                    one plan, zero stress
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full opacity-60"></div>
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
@@ -285,9 +182,9 @@ export default function Courses() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-black">
-            Choose Your{" "}
+            Learning Paths for Every{" "}
             <span className="underline decoration-4 underline-offset-8">
-              Learning Path
+              Level & Goal
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
@@ -295,104 +192,83 @@ export default function Courses() {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category)}
-              className={`${
-                selectedCategory === category
-                  ? "bg-black text-white hover:bg-gray-800"
-                  : "border-black text-black hover:bg-black/10"
-              }`}
-            >
-              {getCategoryIcon(category)}
-              <span className="ml-2">{category}</span>
-            </Button>
-          ))}
-        </div>
-
         {/* Courses Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCourses.map((course) => (
+          {courses.slice(0, 3).map((course) => (
             <Card
               key={course.id}
-              className="bg-white border-gray-200 hover:border-black transition-all duration-300 group shadow-lg"
+              className="bg-white border-gray-200 hover:border-black transition-all duration-300 group shadow-lg overflow-hidden"
             >
-              <CardHeader className="space-y-3">
-                <div className="flex items-center justify-between">
+              <div className="relative">
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 left-4">
                   <Badge className={getLevelColor(course.level)}>
                     {course.level}
                   </Badge>
-                  <Badge className="bg-gray-100 text-black border-gray-200">
-                    {getCategoryIcon(course.category)}
-                    <span className="ml-1">{course.category}</span>
-                  </Badge>
                 </div>
+                <div className="absolute top-4 right-4">
+                  <div className="text-2xl font-bold text-white bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full">
+                    ${course.price}
+                  </div>
+                </div>
+              </div>
 
+              <CardHeader className="space-y-3">
                 <CardTitle className="text-xl text-black group-hover:text-gray-700 transition-colors">
                   {course.title}
                 </CardTitle>
-
-                <CardDescription className="text-gray-600">
-                  with {course.instructor}
-                </CardDescription>
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="w-4 h-4 mr-2 text-black" />
-                    {course.duration} • {course.lessons} lessons
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-sm font-semibold text-black mb-1 flex items-center">
+                      <Users className="w-4 h-4 mr-2 text-blue-600" />
+                      Who it's for
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {course.whoItsFor}
+                    </p>
                   </div>
 
-                  <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-black" />
-                    {course.format}
+                  <div>
+                    <h4 className="text-sm font-semibold text-black mb-1 flex items-center">
+                      <GraduationCap className="w-4 h-4 mr-2 text-green-600" />
+                      What you'll learn
+                    </h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {course.whatYoullLearn.map((item, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Users className="w-4 h-4 mr-2 text-black" />
-                    {course.studentsEnrolled} students enrolled
-                  </div>
-
-                  {course.certificate && (
-                    <div className="flex items-center text-sm text-green-600">
-                      <Award className="w-4 h-4 mr-2" />
-                      Certificate included
-                    </div>
-                  )}
-                </div>
-
-                <div className="flex items-center justify-between pt-2">
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 fill-black text-black" />
-                    <span className="text-sm font-medium text-black">{course.rating}</span>
-                    <span className="text-xs text-gray-600">
-                      ({course.studentsEnrolled})
-                    </span>
-                  </div>
-
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-black">
-                      ${course.price}
-                    </div>
-                    <div className="text-xs text-gray-600">
-                      one-time payment
-                    </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-black mb-1 flex items-center">
+                      <Award className="w-4 h-4 mr-2 text-purple-600" />
+                      Outcome
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {course.outcome}
+                    </p>
                   </div>
                 </div>
 
                 <Button
-                  className="w-full bg-black text-white hover:bg-gray-800 font-semibold"
+                  className="w-full bg-black text-white hover:bg-gray-800 font-semibold mt-6"
                   onClick={() => {
                     setSelectedCourse(course);
                     setBookingModalOpen(true);
                   }}
                 >
-                  Enroll Now
+                  Enroll Now - ${course.price}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </CardContent>
@@ -400,16 +276,6 @@ export default function Courses() {
           ))}
         </div>
 
-        {filteredCourses.length === 0 && (
-          <div className="text-center py-12">
-            <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2 text-black">No courses found</h3>
-            <p className="text-gray-600">
-              Try selecting a different category or check back later for new
-              courses.
-            </p>
-          </div>
-        )}
 
         {/* Booking Modal */}
         <BookingModal
@@ -420,9 +286,9 @@ export default function Courses() {
               ? {
                   id: selectedCourse.id,
                   title: selectedCourse.title,
-                  instructor: selectedCourse.instructor,
-                  duration: selectedCourse.duration,
-                  location: selectedCourse.format,
+                  instructor: "Professional Instructor",
+                  duration: "Comprehensive Course",
+                  location: "Online Learning Platform",
                   price: selectedCourse.price,
                   type: "course",
                 }
