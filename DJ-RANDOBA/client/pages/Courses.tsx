@@ -12,15 +12,8 @@ import { Badge } from "@/components/ui/badge";
 import { useAuth } from "../contexts/AuthContext";
 import { BookingModal } from "../components/BookingModal";
 import {
-  Clock,
-  MapPin,
   Users,
-  Star,
-  Music,
-  Headphones,
-  Volume2,
   ArrowRight,
-  DollarSign,
   GraduationCap,
   Award,
   PlayCircle,
