@@ -16,6 +16,7 @@ import Courses from "./pages/Courses";
 import Agency from "./pages/Agency";
 import Support from "./pages/Support";
 import Contacts from "./pages/Contacts";
+import Playlists from "./pages/Playlists";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -66,15 +67,7 @@ const App = () => (
               <Route path="/courses" element={<Courses />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contacts" element={<Contacts />} />
-              <Route
-                path="/playlists"
-                element={
-                  <PlaceholderPage
-                    title="Curated Playlists"
-                    description="Explore our collection of expertly crafted playlists across various genres."
-                  />
-                }
-              />
+              <Route path="/playlists" element={<Playlists />} />
               <Route path="/agency" element={<Agency />} />
               <Route
                 path="/events-production"
