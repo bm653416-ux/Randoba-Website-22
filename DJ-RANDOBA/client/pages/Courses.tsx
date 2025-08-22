@@ -298,28 +298,9 @@ export default function Courses() {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category)}
-              className={`${
-                selectedCategory === category
-                  ? "bg-black text-white hover:bg-gray-800"
-                  : "border-black text-black hover:bg-black/10"
-              }`}
-            >
-              {getCategoryIcon(category)}
-              <span className="ml-2">{category}</span>
-            </Button>
-          ))}
-        </div>
-
         {/* Courses Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCourses.map((course) => (
+          {courses.slice(0, 3).map((course) => (
             <Card
               key={course.id}
               className="bg-white border-gray-200 hover:border-black transition-all duration-300 group shadow-lg"
@@ -403,16 +384,6 @@ export default function Courses() {
           ))}
         </div>
 
-        {filteredCourses.length === 0 && (
-          <div className="text-center py-12">
-            <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2 text-black">No courses found</h3>
-            <p className="text-gray-600">
-              Try selecting a different category or check back later for new
-              courses.
-            </p>
-          </div>
-        )}
 
         {/* Booking Modal */}
         <BookingModal
