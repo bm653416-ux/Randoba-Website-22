@@ -47,7 +47,6 @@ interface Course {
 
 export default function Courses() {
   const { user } = useAuth();
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
@@ -168,19 +167,6 @@ export default function Courses() {
     },
   ];
 
-  const categories = [
-    "All",
-    "Mixing",
-    "Production",
-    "Business",
-    "Equipment",
-    "Performance",
-  ];
-
-  const filteredCourses =
-    selectedCategory === "All"
-      ? courses
-      : courses.filter((course) => course.category === selectedCategory);
 
   const getLevelColor = (level: string) => {
     switch (level) {
