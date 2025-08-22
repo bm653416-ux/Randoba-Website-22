@@ -288,9 +288,9 @@ export default function Courses() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-black">
-            Choose Your{" "}
+            Learning Paths for Every{" "}
             <span className="underline decoration-4 underline-offset-8">
-              Learning Path
+              Level & Goal
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
