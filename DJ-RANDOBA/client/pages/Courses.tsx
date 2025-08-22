@@ -243,9 +243,9 @@ export default function Courses() {
 
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
-                  Master{" "}
+                  Custom solutions at any scale -{" "}
                   <span className="text-white underline decoration-4 underline-offset-8">
-                    DJ Courses
+                    one plan, zero stress
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
