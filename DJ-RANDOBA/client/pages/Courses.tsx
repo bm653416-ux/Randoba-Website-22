@@ -242,10 +242,13 @@ export default function Courses() {
               </Badge>
 
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
-                  Custom solutions at any scale -{" "}
-                  <span className="text-white underline decoration-4 underline-offset-8">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight drop-shadow-lg max-w-4xl mx-auto">
+                  <span className="block text-white/90 text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mb-2 tracking-wide">
+                    Custom solutions at any scale
+                  </span>
+                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent relative">
                     one plan, zero stress
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full opacity-60"></div>
                   </span>
                 </h1>
                 <p className="text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-md">
