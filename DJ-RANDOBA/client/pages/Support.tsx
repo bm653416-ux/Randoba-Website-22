@@ -511,9 +511,9 @@ export default function Support() {
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Premium{" "}
+              Equipment Rental -{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Equipment Rental
+                Everything For a Flawless Event
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
