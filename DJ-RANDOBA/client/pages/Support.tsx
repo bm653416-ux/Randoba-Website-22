@@ -227,33 +227,33 @@ export default function Support() {
 
   const supportServices = [
     {
-      title: "Equipment Installation",
-      description: "Professional setup and installation of all DJ and audio equipment by certified technicians.",
+      title: "Audit",
+      description: "Site assessment. Briefing - goals, format, schedule, budget. Technical concept development.",
       icon: Settings,
     },
     {
-      title: "Technical Consultation",
-      description: "Expert advice on equipment selection, venue acoustics, and setup optimization.",
+      title: "Design & Calculations",
+      description: "Sound system modeling for your specific space. Lighting design, brand integration. Power infrastructure planning and load calculations.",
       icon: HelpCircle,
     },
     {
-      title: "24/7 Support Hotline",
-      description: "Round-the-clock technical support during your event for immediate problem resolution.",
+      title: "Service",
+      description: "Logistics, delivery, setup, soundcheck, on-site coordination, teardown. Firm timelines and transparent quoting.",
       icon: Phone,
     },
     {
-      title: "Equipment Maintenance",
-      description: "Regular maintenance and calibration services to keep your equipment in perfect condition.",
+      title: "Safety",
+      description: "Backups for critical components, weather protection, certified equipment, standalone power and generators.",
       icon: Wrench,
     },
     {
-      title: "Emergency Replacement",
-      description: "Rapid equipment replacement service to ensure your event runs smoothly without interruption.",
+      title: "Turnkey events",
+      description: "Concept, venue sourcing, technical production, scheduling, catering, logistics, coordination.",
       icon: Zap,
     },
     {
-      title: "Training & Workshops",
-      description: "Professional training sessions on equipment operation and optimization techniques.",
+      title: "Fast booking",
+      description: "Submit a request on the website - we'll propose custom options tailored to your run-of-show and budget.",
       icon: Award,
     },
   ];
