@@ -481,10 +481,10 @@ export default function Support() {
                     
                     <div className="space-y-4">
                       {[
-                        { label: "Equipment Availability", value: "99.9%" },
-                        { label: "Response Time", value: "<5min" },
-                        { label: "Client Satisfaction", value: "98%" },
-                        { label: "Technical Experts", value: "25+" },
+                        { label: "Best Equipment", value: "100%" },
+                        { label: "Special Equipment Packs", value: "6+" },
+                        { label: "Custom Solutions", value: "∞" },
+                        { label: "Any Scale", value: "from 20 to 1,000+ guests" },
                       ].map((item, index) => (
                         <div key={index} className="flex justify-between items-center">
                           <span className="text-gray-300">{item.label}</span>
