@@ -516,7 +516,7 @@ export default function Support() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Professional-grade DJ equipment for every occasion. From intimate gatherings to festival performances.
+              Choose your equipment - we'll handle delivery, installation, and setup anywhere in Spain. Not sure what to pick? Send us a request and we'll recommend the best options for your venue, budget, and tech rider.
             </p>
           </div>
 
