@@ -646,7 +646,7 @@ export default function Support() {
                   </p>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-white mb-2">Included Equipment</h4>
+                    <h4 className="text-sm font-semibold text-white mb-2">Included In The Pack</h4>
                     <div className="space-y-1">
                       {pack.equipment.map((item, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
