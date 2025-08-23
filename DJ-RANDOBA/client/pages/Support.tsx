@@ -604,7 +604,7 @@ export default function Support() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Curated equipment packages for every scale of event. Save time and money with our complete solutions.
+              Need a big impact without the coordination headache? Choose our ready-to-go packages - sound, lighting, and special effects - tailored to your format and guest count. We scale and fine-tune everything to your venue, concept, and timeline. We follow your brief and tech rider, and we handle logistics, installation, and on-site engineering support.
             </p>
           </div>
 
