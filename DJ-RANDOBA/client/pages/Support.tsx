@@ -691,7 +691,7 @@ export default function Support() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive technical support to ensure your events run flawlessly from start to finish.
+              Didn't find the right package? We'll build a bespoke setup around your run-of-show. We work across Spain: cities, beaches, rooftops, mountains, wineries, private villas.
             </p>
           </div>
 
