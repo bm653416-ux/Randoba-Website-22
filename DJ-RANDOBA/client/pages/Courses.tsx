@@ -276,6 +276,130 @@ export default function Courses() {
           ))}
         </div>
 
+        {/* Start Here / Level Up Section */}
+        <div className="mt-20">
+          <div className="grid lg:grid-cols-2 gap-0 min-h-[60vh]">
+            {/* Start Here - Beginners */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-12 lg:p-16 flex items-center relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-10 left-10 w-20 h-20 bg-green-500 rounded-full"></div>
+                <div className="absolute bottom-20 right-20 w-16 h-16 bg-emerald-400 rounded-full"></div>
+                <div className="absolute top-1/2 right-10 w-12 h-12 bg-green-300 rounded-full"></div>
+              </div>
+
+              <div className="relative z-10 w-full">
+                <div className="mb-8">
+                  <div className="inline-flex items-center bg-green-500/20 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <Users className="w-4 h-4 mr-2" />
+                    For Beginners
+                  </div>
+                  <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Start Here
+                  </h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                    Never touched a turntable before? No problem! Our beginner-friendly courses
+                    will take you from zero to confident DJ in just a few weeks.
+                  </p>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    "Learn the basics of DJ equipment",
+                    "Master beatmatching and mixing",
+                    "Build your first music library",
+                    "Practice with professional guidance"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">{index + 1}</span>
+                      </div>
+                      <span className="text-gray-700 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+                  >
+                    <PlayCircle className="w-5 h-5 mr-2" />
+                    Start Learning
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-green-600 text-green-600 hover:bg-green-50 font-semibold"
+                  >
+                    <GraduationCap className="w-5 h-5 mr-2" />
+                    View Beginner Courses
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Level Up - Experienced */}
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-100 p-12 lg:p-16 flex items-center relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-10 right-10 w-20 h-20 bg-purple-500 rounded-full"></div>
+                <div className="absolute bottom-20 left-20 w-16 h-16 bg-indigo-400 rounded-full"></div>
+                <div className="absolute top-1/2 left-10 w-12 h-12 bg-purple-300 rounded-full"></div>
+              </div>
+
+              <div className="relative z-10 w-full">
+                <div className="mb-8">
+                  <div className="inline-flex items-center bg-purple-500/20 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <Award className="w-4 h-4 mr-2" />
+                    For Experienced DJs
+                  </div>
+                  <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Level Up
+                  </h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                    Ready to take your skills to the next level? Master advanced techniques,
+                    learn production, and become a professional DJ.
+                  </p>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    "Advanced mixing and turntablism",
+                    "Music production and remixing",
+                    "Professional performance skills",
+                    "Build your DJ career and brand"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                        <Award className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-purple-600 hover:bg-purple-700 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+                  >
+                    <ArrowRight className="w-5 h-5 mr-2" />
+                    Advance Skills
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold"
+                  >
+                    <Award className="w-5 h-5 mr-2" />
+                    View Advanced Courses
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Booking Modal */}
         <BookingModal
