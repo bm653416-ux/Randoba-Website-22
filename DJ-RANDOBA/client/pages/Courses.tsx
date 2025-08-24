@@ -306,7 +306,7 @@ export default function Courses() {
                   {[
                     "With caring mentors and a safe space, you'll use technique as a tool: feel the music, read the room, guide its energy.",
                     "We help you beat imposter syndrome, build confidence, and find your voice.",
-                    "Train on pro gear with working DJs and producers, get clear feedback, build taste and timing.",
+                    "With real support, a real community, and a first stage to start your artist journey.",
                     "You'll leave with tight mixes, release-ready music, and real stage time. Join START and take a real step toward your dream."
                   ].map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -318,23 +318,6 @@ export default function Courses() {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
-                  >
-                    <PlayCircle className="w-5 h-5 mr-2" />
-                    Join START
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-green-600 text-green-600 hover:bg-green-50 font-semibold"
-                  >
-                    <GraduationCap className="w-5 h-5 mr-2" />
-                    Explore START Program
-                  </Button>
-                </div>
               </div>
             </div>
 
