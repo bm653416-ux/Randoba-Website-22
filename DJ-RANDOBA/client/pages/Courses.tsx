@@ -304,16 +304,16 @@ export default function Courses() {
 
                 <div className="space-y-4 mb-8">
                   {[
-                    "Learn the basics of DJ equipment",
-                    "Master beatmatching and mixing",
-                    "Build your first music library",
-                    "Practice with professional guidance"
+                    "With caring mentors and a safe space, you'll use technique as a tool: feel the music, read the room, guide its energy.",
+                    "We help you beat imposter syndrome, build confidence, and find your voice.",
+                    "Train on pro gear with working DJs and producers, get clear feedback, build taste and timing.",
+                    "You'll leave with tight mixes, release-ready music, and real stage time. Join START and take a real step toward your dream."
                   ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                         <span className="text-white text-xs font-bold">{index + 1}</span>
                       </div>
-                      <span className="text-gray-700 font-medium">{item}</span>
+                      <span className="text-gray-700 font-medium leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>
