@@ -324,7 +324,7 @@ export default function Courses() {
                     className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
                   >
                     <PlayCircle className="w-5 h-5 mr-2" />
-                    Start Learning
+                    Join START
                   </Button>
                   <Button
                     size="lg"
