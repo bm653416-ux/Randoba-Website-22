@@ -69,6 +69,37 @@ export default function Agency() {
     message: "",
   });
 
+  // CRM Integration State for Bitrix24
+  const [isLoadingArtists, setIsLoadingArtists] = useState(false);
+  const [artistsPage, setArtistsPage] = useState(1);
+  const [totalArtists, setTotalArtists] = useState(50);
+
+  // Utility function for Bitrix24 API integration
+  // This would connect to your Bitrix24 CRM to fetch artist data
+  const fetchArtistsFromCRM = async (page = 1, limit = 12) => {
+    try {
+      setIsLoadingArtists(true);
+
+      // Example API call to Bitrix24
+      // const response = await fetch(`/api/bitrix24/artists?page=${page}&limit=${limit}`, {
+      //   headers: {
+      //     'Authorization': `Bearer ${process.env.BITRIX24_TOKEN}`,
+      //     'Content-Type': 'application/json'
+      //   }
+      // });
+      // const data = await response.json();
+      // return data.artists;
+
+      // For now, return mock data
+      return artists;
+    } catch (error) {
+      console.error('Error fetching artists from Bitrix24:', error);
+      return [];
+    } finally {
+      setIsLoadingArtists(false);
+    }
+  };
+
   // Calendar state
   const [currentDate, setCurrentDate] = useState(new Date());
   const [hoveredEvent, setHoveredEvent] = useState<CalendarEvent | null>(null);
