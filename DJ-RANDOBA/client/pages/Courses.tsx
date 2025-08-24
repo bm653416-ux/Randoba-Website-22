@@ -298,8 +298,7 @@ export default function Courses() {
                     Start Here
                   </h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                    Never touched a turntable before? No problem! Our beginner-friendly courses
-                    will take you from zero to confident DJ in just a few weeks.
+                    You love music and big nights, but the stage still feels far. Gear, no contacts, and self-doubt can make you think "Maybe it's not for me?" What you really want is self-expression and a real place in the scene, not just button skills.
                   </p>
                 </div>
 
