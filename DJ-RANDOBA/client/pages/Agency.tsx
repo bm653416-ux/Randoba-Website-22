@@ -878,20 +878,28 @@ export default function Agency() {
             ))}
           </div>
 
-          {/* Load More Artists - For CRM Integration */}
+          {/* Load More Artists - CRM Integration Ready */}
           <div className="text-center mt-12">
             <div className="inline-flex items-center space-x-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
               <span className="text-gray-300 text-sm">
-                Showing {artists.length} of 50+ artists
+                Showing {artists.length} of {totalArtists}+ artists
               </span>
               <Button
                 size="sm"
                 variant="outline"
-                className="border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 text-xs"
+                className="border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 text-xs disabled:opacity-50"
+                onClick={() => {
+                  setArtistsPage(prev => prev + 1);
+                  fetchArtistsFromCRM(artistsPage + 1);
+                }}
+                disabled={isLoadingArtists}
               >
-                Load More Artists
+                {isLoadingArtists ? "Loading..." : "Load More Artists"}
               </Button>
             </div>
+            <p className="text-xs text-gray-500 mt-2">
+              🔗 Powered by Bitrix24 CRM Integration
+            </p>
           </div>
 
           {/* Join Our Roster Button */}
