@@ -88,22 +88,32 @@ export default function Agency() {
     console.log("Partnership request:", formData);
   };
 
+  // Artist data structure optimized for CRM integration (Bitrix24)
+  // This would typically be fetched from an API endpoint connected to Bitrix24
   const artists = [
     {
-      id: 1,
+      id: "ARTIST_001", // CRM-friendly ID format
       name: "DJ Aurora",
       realName: "Elena Starlight",
       genre: "Progressive House",
       followers: "2.5M",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      description:
-        "Chart-topping progressive house sensation with residencies at world's top clubs.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+      description: "Chart-topping progressive house sensation with residencies at world's top clubs.",
       achievements: [
         "#1 Beatport Progressive",
         "Tomorrowland Mainstage",
         "Ultra Music Festival",
+        "Residency at Pacha Ibiza",
+        "Grammy Nominated"
       ],
+      // CRM fields for Bitrix24 integration
+      status: "active", // active, inactive, pending
+      tier: "premium", // premium, standard, emerging
+      bookingRate: 15000, // EUR per performance
+      availability: "worldwide",
+      languages: ["EN", "ES", "DE"],
+      specialties: ["Festivals", "Clubs", "Private Events"],
+      lastUpdated: "2024-01-15T10:30:00Z",
       social: {
         instagram: "@dj_aurora",
         tiktok: "@djaurora",
