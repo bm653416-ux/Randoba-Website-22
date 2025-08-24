@@ -119,6 +119,37 @@ export default function Agency() {
     console.log("Partnership request:", formData);
   };
 
+  /*
+   * BITRIX24 CRM INTEGRATION GUIDE
+   * ===============================
+   *
+   * To connect this component with Bitrix24 CRM:
+   *
+   * 1. API Setup:
+   *    - Create API endpoint: /api/bitrix24/artists
+   *    - Use Bitrix24 REST API with your webhook URL
+   *    - Map Bitrix24 fields to our artist interface
+   *
+   * 2. Bitrix24 Fields Mapping:
+   *    - ID → Deal/Contact ID
+   *    - name → Artist Stage Name
+   *    - realName → Contact Full Name
+   *    - genre → Custom Field "Genre"
+   *    - followers → Custom Field "Social Following"
+   *    - bookingRate → Deal Amount
+   *    - status → Deal Stage
+   *    - tier → Custom Field "Artist Tier"
+   *
+   * 3. Real-time Updates:
+   *    - Use Bitrix24 webhooks for real-time updates
+   *    - Implement WebSocket connection for live data
+   *
+   * 4. Mobile Performance:
+   *    - Implement pagination (12 artists per page)
+   *    - Add image lazy loading
+   *    - Cache frequently accessed artists
+   */
+
   // Artist data structure optimized for CRM integration (Bitrix24)
   // This would typically be fetched from an API endpoint connected to Bitrix24
   const artists = [
