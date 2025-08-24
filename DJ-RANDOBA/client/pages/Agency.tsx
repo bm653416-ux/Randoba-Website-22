@@ -718,113 +718,132 @@ export default function Agency() {
             </p>
           </div>
 
-          <div className="space-y-8">
+          {/* Artist Grid - Optimized for CRM Management */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {artists.map((artist, index) => (
               <Card
                 key={artist.id}
-                className="bg-black/90 backdrop-blur-xl border-white/10 overflow-hidden group hover:bg-black/95 transition-all duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-black/90 backdrop-blur-xl border-white/10 overflow-hidden group hover:bg-black/95 hover:border-cyan-400/30 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="flex flex-col lg:flex-row min-h-[400px]">
-                  {/* Image Section */}
-                  <div className="relative lg:w-1/2 h-64 lg:h-auto">
-                    <img
-                      src={artist.image}
-                      alt={artist.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-r from-transparent to-black/60"></div>
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-400/30">
-                        <Users className="w-3 h-3 mr-1" />
-                        {artist.followers}
-                      </Badge>
-                    </div>
+                {/* Compact Image Section */}
+                <div className="relative h-48 sm:h-52 lg:h-48 overflow-hidden">
+                  <img
+                    src={artist.image}
+                    alt={artist.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+                  {/* Floating Badges */}
+                  <div className="absolute top-3 right-3">
+                    <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-400/30 text-xs backdrop-blur-sm">
+                      <Users className="w-3 h-3 mr-1" />
+                      {artist.followers}
+                    </Badge>
                   </div>
 
-                  {/* Content Section */}
-                  <div className="lg:w-1/2 p-8 flex flex-col justify-between">
-                    {/* Career Milestones Section */}
-                    <div className="space-y-6">
-                      <div>
-                        <h2 className="text-3xl font-bold text-cyan-400 mb-2 tracking-wider">
-                          CAREER MILESTONES
-                        </h2>
-                        <div className="space-y-3">
-                          {artist.achievements.map((achievement, idx) => (
-                            <div key={idx} className="flex items-center space-x-3">
-                              <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                              <span className="text-white text-sm font-medium">
-                                {achievement}
-                              </span>
-                            </div>
-                          ))}
-                          <div className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                            <span className="text-white text-sm font-medium">
-                              Signed releases on {artist.genre} labels
-                            </span>
-                          </div>
-                          <div className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                            <span className="text-white text-sm font-medium">
-                              2-year residency at premier venues
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+                  <div className="absolute top-3 left-3">
+                    <Badge className="bg-purple-500/20 text-purple-300 border-purple-400/30 text-xs backdrop-blur-sm">
+                      {artist.genre}
+                    </Badge>
+                  </div>
 
-                      <div className="space-y-4">
-                        <p className="text-white text-sm leading-relaxed">
-                          Available for performances across Europe, the Middle East, Asia, and the Americas, with a dedicated audience in the UK, Spain, Germany, USA, and Brazil.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* About Section */}
-                    <div className="space-y-4 mt-8">
-                      <h3 className="text-xl font-bold text-cyan-400 tracking-wider">
-                        ABOUT THE ARTIST
-                      </h3>
-                      <p className="text-white text-sm leading-relaxed">
-                        {artist.description}
-                      </p>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-white">
-                        <div>
-                          <span className="text-cyan-400 font-semibold">STAGE EXPERIENCE:</span>
-                          <span className="ml-2">LONDON, BERLIN, BARCELONA, IBIZA</span>
-                        </div>
-                        <div>
-                          <span className="text-cyan-400 font-semibold">FESTIVAL APPEARANCES:</span>
-                          <span className="ml-2">SONAR, ADE, CREAMFIELDS</span>
-                        </div>
-                        <div className="sm:col-span-2">
-                          <span className="text-cyan-400 font-semibold">COLLABORATIONS:</span>
-                          <span className="ml-2">SOLOMUN, BLACK COFFEE, ADRIATIQUE</span>
-                        </div>
-                      </div>
-
-                      {/* Actions */}
-                      <div className="flex justify-between items-center pt-6 border-t border-cyan-400/20">
-                        <div className="flex space-x-4">
-                          <Instagram className="w-5 h-5 text-gray-400 hover:text-pink-400 cursor-pointer transition-colors" />
-                          <Video className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
-                          <Youtube className="w-5 h-5 text-gray-400 hover:text-red-400 cursor-pointer transition-colors" />
-                        </div>
-                        <Button
-                          onClick={() => handleBookArtist(artist)}
-                          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 font-semibold px-6 py-2"
-                        >
-                          <CalendarIcon className="w-4 h-4 mr-2" />
-                          Book Artist
-                        </Button>
-                      </div>
-                    </div>
+                  {/* Artist Name Overlay */}
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <h3 className="text-lg font-bold text-white truncate">
+                      {artist.name}
+                    </h3>
+                    <p className="text-sm text-gray-300 truncate">
+                      {artist.realName}
+                    </p>
                   </div>
                 </div>
+
+                {/* Compact Content Section */}
+                <CardContent className="p-4 space-y-3">
+                  {/* Description */}
+                  <p className="text-gray-300 text-sm leading-relaxed line-clamp-2">
+                    {artist.description}
+                  </p>
+
+                  {/* Key Achievements - Compact List */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+                      Key Achievements
+                    </h4>
+                    <div className="space-y-1">
+                      {artist.achievements.slice(0, 2).map((achievement, idx) => (
+                        <div key={idx} className="flex items-start space-x-2">
+                          <div className="w-1 h-1 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-white text-xs leading-relaxed">
+                            {achievement}
+                          </span>
+                        </div>
+                      ))}
+                      {artist.achievements.length > 2 && (
+                        <div className="flex items-start space-x-2">
+                          <div className="w-1 h-1 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-400 text-xs">
+                            +{artist.achievements.length - 2} more achievements
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Performance Locations - Compact */}
+                  <div className="space-y-1">
+                    <h4 className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">
+                      Available Worldwide
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {["EU", "UK", "USA", "ASIA"].map((region, idx) => (
+                        <Badge
+                          key={idx}
+                          className="bg-white/10 text-white border-white/20 text-xs px-2 py-0.5"
+                        >
+                          {region}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Social Links - Compact */}
+                  <div className="flex items-center justify-between pt-3 border-t border-white/10">
+                    <div className="flex space-x-3">
+                      <Instagram className="w-4 h-4 text-gray-400 hover:text-pink-400 cursor-pointer transition-colors" />
+                      <Video className="w-4 h-4 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
+                      <Youtube className="w-4 h-4 text-gray-400 hover:text-red-400 cursor-pointer transition-colors" />
+                    </div>
+                    <Button
+                      size="sm"
+                      onClick={() => handleBookArtist(artist)}
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 text-xs font-semibold px-4 py-2"
+                    >
+                      <CalendarIcon className="w-3 h-3 mr-1" />
+                      Book
+                    </Button>
+                  </div>
+                </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Load More Artists - For CRM Integration */}
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center space-x-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
+              <span className="text-gray-300 text-sm">
+                Showing {artists.length} of 50+ artists
+              </span>
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 text-xs"
+              >
+                Load More Artists
+              </Button>
+            </div>
           </div>
 
           {/* Join Our Roster Button */}
