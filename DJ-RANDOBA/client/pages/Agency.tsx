@@ -933,37 +933,6 @@ export default function Agency() {
             </p>
           </div>
 
-          {/* Join Our Roster Button */}
-          <div className="text-center mt-16">
-            <Button
-              size="lg"
-              className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 text-white hover:from-cyan-600 hover:via-purple-700 hover:to-pink-700 font-bold text-lg px-12 py-4 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500 animate-pulse hover:animate-none"
-            >
-              {/* Animated background effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              {/* Sparkle effects */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1 left-1/4 w-1 h-1 bg-white rounded-full animate-ping opacity-60"></div>
-                <div className="absolute top-3 right-1/3 w-0.5 h-0.5 bg-cyan-200 rounded-full animate-pulse opacity-80" style={{ animationDelay: '0.5s' }}></div>
-                <div className="absolute bottom-2 left-1/3 w-1.5 h-1.5 bg-pink-200 rounded-full animate-bounce opacity-40" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1 right-1/4 w-0.5 h-0.5 bg-purple-200 rounded-full animate-ping opacity-70" style={{ animationDelay: '1.5s' }}></div>
-              </div>
-
-              {/* Button text */}
-              <span className="relative z-10 flex items-center space-x-3">
-                <span>Join Our Roster</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/50 via-purple-600/50 to-pink-600/50 blur-xl group-hover:blur-2xl transition-all duration-500 -z-10"></div>
-            </Button>
-
-            <p className="text-gray-400 text-sm mt-4 animate-bounce">
-              Ready to take your career to the next level?
-            </p>
-          </div>
         </div>
       </section>
 
