@@ -205,20 +205,27 @@ export default function Agency() {
       },
     },
     {
-      id: 6,
+      id: "ARTIST_006",
       name: "Cyber Pulse",
       realName: "David Kim",
       genre: "Cyberpunk / Industrial",
       followers: "900K",
-      image:
-        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
-      description:
-        "Cyberpunk visionary merging industrial beats with futuristic aesthetics.",
+      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop",
+      description: "Cyberpunk visionary merging industrial beats with futuristic aesthetics.",
       achievements: [
         "Cyberpunk 2077 Soundtrack",
         "DEF CON Performer",
         "Industrial Label",
+        "Tech Conference Regular",
+        "VR Concert Pioneer"
       ],
+      status: "active",
+      tier: "emerging",
+      bookingRate: 8000,
+      availability: "worldwide",
+      languages: ["EN", "KR", "JP"],
+      specialties: ["Tech Events", "Gaming Conventions", "Virtual Reality"],
+      lastUpdated: "2024-01-15T10:30:00Z",
       social: {
         instagram: "@cyberpulse",
         tiktok: "@cyber_pulse",
