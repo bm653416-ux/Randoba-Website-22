@@ -888,21 +888,40 @@ export default function Agency() {
                     </div>
                   </div>
 
-                  {/* Social Links - Compact */}
-                  <div className="flex items-center justify-between pt-3 border-t border-white/10">
-                    <div className="flex space-x-3">
+                  {/* Social Links */}
+                  <div className="pt-3 border-t border-white/10 space-y-3">
+                    <div className="flex justify-center space-x-4">
                       <Instagram className="w-4 h-4 text-gray-400 hover:text-pink-400 cursor-pointer transition-colors" />
                       <Video className="w-4 h-4 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
                       <Youtube className="w-4 h-4 text-gray-400 hover:text-red-400 cursor-pointer transition-colors" />
                     </div>
-                    <Button
-                      size="sm"
-                      onClick={() => handleBookArtist(artist)}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 text-xs font-semibold px-4 py-2"
-                    >
-                      <CalendarIcon className="w-3 h-3 mr-1" />
-                      Book
-                    </Button>
+
+                    {/* Mobile-Adaptive Button Layout */}
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <Button
+                        size="sm"
+                        onClick={() => handleBookArtist(artist)}
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 text-xs font-semibold"
+                      >
+                        <CalendarIcon className="w-3 h-3 mr-1" />
+                        Book Artist
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => {
+                          // Scroll to partnership form
+                          const partnershipSection = document.querySelector('form');
+                          if (partnershipSection) {
+                            partnershipSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        className="flex-1 border-white/30 text-white hover:bg-white/10 text-xs font-semibold"
+                      >
+                        <Users className="w-3 h-3 mr-1" />
+                        Join Roster
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
