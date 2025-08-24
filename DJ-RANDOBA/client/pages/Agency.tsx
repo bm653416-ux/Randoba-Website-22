@@ -908,7 +908,6 @@ export default function Agency() {
                       </Button>
                       <Button
                         size="sm"
-                        variant="outline"
                         onClick={() => {
                           // Scroll to partnership form
                           const partnershipSection = document.querySelector('form');
@@ -916,7 +915,7 @@ export default function Agency() {
                             partnershipSection.scrollIntoView({ behavior: 'smooth' });
                           }
                         }}
-                        className="flex-1 border-white/30 text-white hover:bg-white/10 text-xs font-semibold"
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 text-xs font-semibold"
                       >
                         <Users className="w-3 h-3 mr-1" />
                         Join Roster
