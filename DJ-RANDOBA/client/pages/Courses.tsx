@@ -297,7 +297,7 @@ export default function Courses() {
                   <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                     Start Here
                   </h3>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
                     You love music and big nights, but the stage still feels far. Gear, no contacts, and self-doubt can make you think "Maybe it's not for me?" What you really want is self-expression and a real place in the scene, not just button skills.
                   </p>
                 </div>
