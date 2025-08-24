@@ -332,7 +332,7 @@ export default function Courses() {
                     className="border-green-600 text-green-600 hover:bg-green-50 font-semibold"
                   >
                     <GraduationCap className="w-5 h-5 mr-2" />
-                    View Beginner Courses
+                    Explore START Program
                   </Button>
                 </div>
               </div>
